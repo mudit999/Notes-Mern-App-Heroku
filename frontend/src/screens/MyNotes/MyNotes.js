@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Container,Card } from "react-bootstrap";
 import MainScreen from '../../components/MainScreen';
@@ -8,15 +8,13 @@ import Masonry from 'react-masonry-css'
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 import { toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import './../../toastifyCustomStyles.css';
 import ErrorMessage from '../../components/ErrorMessage';
 
 const MyNotes = () => {
 
     const [notes,setNotes] = useState([]);
     const [error, setError] = useState(false);
-    const componentMounted = useRef(true); // component is mounted
-
 
     const deleteHandler = async(id) => {
           const {data} = await axios.delete(`/api/notes/delete/${id}`);
@@ -34,11 +32,7 @@ const MyNotes = () => {
     const fetchNotes = async() => {
         try{
             const {data} = await axios.get(`/api/notes/${userData._id}`);
-            //checking whether compponent is still mounted or not
-            if(componentMounted.current){
                 setNotes(data);
-            }
-
         }catch(error){
             setError(error.response.data.message);
         }
@@ -46,10 +40,6 @@ const MyNotes = () => {
 
     useEffect(() => {
         fetchNotes();
-
-        return () => { // This code runs when component is unmounted
-            componentMounted.current = false; // set it to false when we leave the page
-        }
     },[notes])
 
     const breakpoints = {

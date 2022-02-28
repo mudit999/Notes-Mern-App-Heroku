@@ -7,7 +7,7 @@ import Loading from '../../components/Loading';
 import MainScreen from '../../components/MainScreen';
 import "./RegisterScreen.css";
 import { toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import './../../toastifyCustomStyles.css';
 
 const RegisterScreen = () => {
 

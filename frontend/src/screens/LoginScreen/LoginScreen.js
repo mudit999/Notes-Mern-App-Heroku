@@ -8,7 +8,7 @@ import MainScreen from '../../components/MainScreen';
 import './LoginScreen.css';
 
 import { toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import './../../toastifyCustomStyles.css';
 
 const LoginScreen = () => {
 
