@@ -73,7 +73,6 @@ const CreateNote = () => {
                     <Form.Control
                         required 
                         type="text" 
-                        placeholder="Categories like Html, Css, Javascript"
                         value={category}
                         onChange={(e) => {setCategory(e.target.value)}} />
                 </Form.Group>
