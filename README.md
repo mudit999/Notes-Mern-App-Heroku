@@ -1,5 +1,7 @@
 # Notes-App
 
+### NOTE: Updated version of this project: https://github.com/mudit999/Notes-App-Frontend
+
 Notes App is a safe, user friendly Web Note taking app.
 
 Features: 
@@ -12,9 +14,6 @@ Tech Stack used:
 - Backend: Node.js, Express, Mongoose
 - Database: MongoDB Atlas
 
-Notes-App is deployed on Heroku 🚀
-- Link: https://notes-mern-web-app.herokuapp.com/
-
 # Data-Flow Diagram
 ![](https://github.com/mudit999/Notes-Mern-App/blob/master/demo/notesApp-Data-Flow.png)
 
@@ -22,6 +21,3 @@ Notes-App is deployed on Heroku 🚀
 
 # Demo
 ![](https://github.com/mudit999/Notes-Mern-App/blob/master/demo/notes-app-demo.gif)
-
-[Demo user credentials]
-- Email: test@gmail.com, Password: test
